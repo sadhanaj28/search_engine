@@ -24,11 +24,6 @@ class SummariesDocument(Document):
         analyzer=html_strip,
         fields={'raw': fields.TextField(), }
     )
-    # summary = Text(
-    #     analyzer=html_strip,
-    #     fields={'raw': Keyword()}
-    # )
-
 
     class Index:
         # Name of elasticsearch index

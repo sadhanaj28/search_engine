@@ -9,7 +9,7 @@ import tqdm
 import ujson
 from aiohttp import web
 from elasticsearch import Elasticsearch
-from elasticsearch_dsl import A, Q
+from elasticsearch_dsl import Q
 
 
 # Get an instance of a logger

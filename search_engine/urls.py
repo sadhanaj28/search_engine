@@ -1,9 +1,9 @@
 from django.urls import path
 
-from .views import SearchEXP
+from .views import SummarySearchView
 
 
 urlpatterns = [
-    path('api/v1/summaries_list/', SearchEXP.as_view()),
+    path('api/v1/summaries_list/', SummarySearchView.as_view(), name='summaries-list'),
 ]
 
