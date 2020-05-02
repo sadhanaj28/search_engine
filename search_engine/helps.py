@@ -8,14 +8,12 @@ import aiohttp
 import tqdm
 import ujson
 from aiohttp import web
-from elasticsearch import Elasticsearch
 from elasticsearch_dsl import Q
-
 
 # Get an instance of a logger
 logger = logging.getLogger(__name__)
 
-client = Elasticsearch()
+
 MAX_RECORDS = 10
 Result = namedtuple('Result', 'status data')
 HTTPStatus = Enum('Status', 'ok not_found error')
@@ -119,7 +117,7 @@ class BookCoroutineService:
         asyncio.set_event_loop(loop)
 
         coro = self.schedule_services(records_list, qry, self.retrieve_author_details, verbose, concur_req)
-        counts = loop.run_until_complete(coro)
+        loop.run_until_complete(coro)
 
         loop.close()
 
