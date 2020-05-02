@@ -1,6 +1,6 @@
 # search_engine_assignment
 
-This is a search engine which search/find data from Summary records. This builds using Django framework and elasticsearch. Based on given a search query, searches the book summaries and returns the K most relevant ones A search engine query is the set of keywords that users will type in order to find a relevant document. 
+This is a search engine api which search/find data from Summary records. This builds using Django framework and elasticsearch. Based on given a search query, searches the book summaries and returns the K most relevant ones A search engine query is the set of keywords that users will type in order to find a relevant document. 
 
 ### Features
 * It provides an API that take a list of queries and an integer K and returns the top K matched books as list, for every query in the list, so the result will be a list of lists.
