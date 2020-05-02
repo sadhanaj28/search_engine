@@ -17,9 +17,6 @@ from .custom_log_formater import CustomFormatter
 BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 
 
-# Quick-start development settings - unsuitable for production
-# See https://docs.djangoproject.com/en/3.0/howto/deployment/checklist/
-
 # SECURITY WARNING: keep the secret key used in production secret!
 SECRET_KEY = '40^l+b$*nzc5ecl0c3d9(u3wfw@+@yud2cguyo^$v#d)4!*2!1'
 
@@ -30,7 +27,6 @@ ALLOWED_HOSTS = []
 
 
 # Application definition
-
 INSTALLED_APPS = [
     'django.contrib.admin',
     'django.contrib.auth',
@@ -57,7 +53,6 @@ MIDDLEWARE = [
     'django.contrib.auth.middleware.AuthenticationMiddleware',
     'django.contrib.messages.middleware.MessageMiddleware',
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
-    # 'debug_toolbar_force.middleware.ForceDebugToolbarMiddleware',
 ]
 
 ROOT_URLCONF = 'library.urls'
@@ -81,6 +76,7 @@ TEMPLATES = [
 WSGI_APPLICATION = 'library.wsgi.application'
 
 
+# database setting
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.mysql',
@@ -100,9 +96,6 @@ REST_FRAMEWORK = {
 }
 
 
-# Password validation
-# https://docs.djangoproject.com/en/3.0/ref/settings/#auth-password-validators
-
 AUTH_PASSWORD_VALIDATORS = [
     {
         'NAME': 'django.contrib.auth.password_validation.UserAttributeSimilarityValidator',
@@ -119,6 +112,7 @@ AUTH_PASSWORD_VALIDATORS = [
 ]
 
 
+# define elasticsearch server details
 ELASTICSEARCH_DSL = {
     'default': {
         'hosts': 'localhost:9200'
@@ -150,7 +144,6 @@ DEBUG_TOOLBAR_PANELS = (
     'debug_toolbar.panels.signals.SignalsPanel',
     'debug_toolbar.panels.logging.LoggingPanel',
     'debug_toolbar.panels.redirects.RedirectsPanel',
-    # Additional
     'elastic_panel.panel.ElasticDebugPanel',
 )
 
@@ -217,15 +210,7 @@ USE_L10N = True
 USE_TZ = True
 
 
-# Static files (CSS, JavaScript, Images)
-# https://docs.djangoproject.com/en/3.0/howto/static-files/
-
 STATIC_URL = '/static/'
 
-INTERNAL_IPS = [
-    # ...
-    '127.0.0.1',
-    # ...
-]
-
+# to run unit test and find test folder into differnt app
 TEST_RUNNER = 'django.test.runner.DiscoverRunner'
