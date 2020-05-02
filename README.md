@@ -48,6 +48,7 @@ mysql> exit
 - virtualenv environment_name
 - source environment_name/bin/activate
 - pip install -r requirements.txt
+- to see debug log, create search_debug.log into /var/log/search_engine/ folder
 
 ### Changes in Settings.py before start
 * update database name, user, password, host, port into DATABASES
