@@ -7,7 +7,6 @@ from elasticsearch import Elasticsearch
 from elasticsearch_dsl import Q
 
 from .factories.summary import SummaryFactory
-from ..models import Summaries
 from ..serializers import SummariesDocument
 from ..utils import rebuild_elasticsearch_index
 
