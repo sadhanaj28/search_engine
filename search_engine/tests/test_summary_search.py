@@ -16,7 +16,6 @@ class TestSummarySearch(TestCase):
     """Test search."""
 
     def setUp(self):
-        self.summary = Summaries(1, "hello")
         self.es_client = Elasticsearch()
         self.search_instance = SummariesDocument.search()
         self.size = 2
