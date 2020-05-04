@@ -4,7 +4,7 @@ from rest_framework import status
 from rest_framework.test import APITestCase
 
 
-class SearchTest(APITestCase):
+class SummarySearchTest(APITestCase):
     def test_search_summary_with_valid_data(self):
         url = reverse('summaries-list')
         data = {"queries": ["is your problems", "achieve take book"], "k": 3}
