@@ -81,8 +81,8 @@ DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.mysql',
         'NAME': 'library',
-        'USER': 'root',
-        'PASSWORD': 'root',
+        'USER': 'hscode',
+        'PASSWORD': 'hscode1234',
         'HOST': '127.0.0.1',
         'PORT': '3306',
     }
@@ -180,18 +180,18 @@ LOGGING = {
             'class': 'logging.StreamHandler',
             'formatter': 'verbose'
         },
-        'file_finance_json': {
-            'level': 'DEBUG',
-            'class': 'logging.FileHandler',
-            'filename': '/var/log/search_engine/search_debug.log',
-            'formatter': 'json'
-        }
+        # 'file_finance_json': {
+        #     'level': 'DEBUG',
+        #     'class': 'logging.FileHandler',
+        #     'filename': '/var/log/search_engine/search_debug.log',
+        #     'formatter': 'json'
+        # }
     },
     'loggers': {
-        'search_engine': {
-            'handlers': ['file_finance_json'],
-            'level': 'DEBUG',
-        },
+        # 'search_engine': {
+        #     'handlers': ['file_finance_json'],
+        #     'level': 'DEBUG',
+        # },
     }
 }
 
